@@ -37,7 +37,7 @@
     border-radius: 0.25rem;
 }
 .menu-item-link.active{
-    background-color: var(--primary);
+    background-color: #338bf0;
     color: white !important;
 }
 .menu-item-link:hover{
@@ -45,14 +45,6 @@
     color: var(--dark);
 }
 
-
-.menu-item-link span{
-
-}
-
-.menu-item-link i{
-
-}
 
 .menu-spacer{
     padding: 10px 0;
@@ -90,6 +82,7 @@
 }
 
 .status-card{
+    cursor: pointer;
     transition: 0.3s;
 }
 
@@ -133,8 +126,25 @@
     overflow: scroll;
 }
 
+table tr td img{
+    height: 30px;
+    border-radius: 50%;
+}
 
-
+/* .front-panel-side-bar {
+         
+    overflow-x: hidden;
+    overflow-y: scroll;           
+    position: fixed;
+    top: 15px;
+} */
+.post{
+    transition: 0.5s !important;
+}
+.post:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 0.3rem 0.5rem rgb(0 0 0 / 8%) !important;
+}
 
 @media screen and (max-width: 780px){
     .sidebar{

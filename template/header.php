@@ -1,4 +1,5 @@
-<?php require_once "core/base.php" ?>
+<?php require_once "core/base.php"; ?>
+<?php require_once "core/functions.php"; ?>
 
 <!doctype html>
 <html lang="en">
@@ -8,15 +9,20 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Admin Dashboard</title>
+
+    <link rel="shortcut icon" href="<?php $url; ?>/assets/img/user/user2.png" type="image/png">
+
     <link rel="stylesheet" href="<?php echo $url; ?>/assets/css/app.css">
-    <link rel="stylesheet" href="<?php echo $url; ?>/assets/vendor/feather-icons-web/feather.css">
+    <link rel="stylesheet" href="<?php echo $url; ?>/assets/vendor/feather-icons-web/feather.css"> 
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo $url ?>/assets/vendor/data_table/dataTables.bootstrap4.min.css">   
     <link rel="stylesheet" href="<?php echo $url; ?>/assets/css/style.css">
 </head>
 <body>
 <section class="main container-fluid">
     <div class="row">
 
-    <?php include "template/sidebar.php"; ?>
+<?php include "template/sidebar.php"; ?>
 
 <div class="col-12 col-lg-9 col-xl-10 vh-100 py-3 content">
   <div class="row header mb-4">
@@ -35,7 +41,8 @@
               </form>
               <div class="dropdown">
                   <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <img src="<?php echo $url; ?>/assets/img/user/52648177.png" class="user-img shadow-sm" alt=""> Solomon
+                      <img src="<?php echo $url; ?>/assets/img/<?php echo $_SESSION['user']['photo']; ?>" class="user-img shadow-sm" alt=""> 
+                      <?php echo $_SESSION['user']['name']; ?>
                   </button>
                   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="#">Action</a>

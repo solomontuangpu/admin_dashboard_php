@@ -30,6 +30,8 @@ $(".full-screen-btn").click(function () {
 let screenHeight = $(window).height();
 let currentMenuHeight = $(".nav-menu .active").offset().top;
 
+console.log(currentMenuHeight);
+
 if(currentMenuHeight > screenHeight*0.8 ){
     $(".sidebar").animate({
         scrollTop:currentMenuHeight-100
