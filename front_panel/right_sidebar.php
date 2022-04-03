@@ -24,7 +24,10 @@
                         <p class=""> 
                         Hi, <b>You are in guest mode!</b>
                         </p>
-                        <a href="register.php" class="btn btn-primary btn-sm">Register Here</a>
+                        <div class="">
+                            <a href="register.php" class="btn btn-primary btn-sm">Register Here</a>
+                            <a href="login.php" class="btn btn-primary btn-sm">Log In</a>
+                        </div>
                     </div>
                 </div>
 

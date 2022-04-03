@@ -7,9 +7,22 @@
 
 <?php
 
-    $id = $_GET['id'];
+    if(isset($_GET['id'])) {
 
-    $current = post($id);
+        $id = $_GET['id'];
+        $current = post($id);
+
+    } else {
+
+        linkTo("index.php");
+
+    }
+
+    
+    if(!$current) {
+        linkTo("index.php");
+    } 
+
     $currentCategory = $current['category_id'];
 
     if($_SESSION['user']) {
